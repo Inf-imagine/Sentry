@@ -7,9 +7,18 @@
 
 
 
-Sentry-Image is an open-source library for detecting AI-generated contents. The core features will include:
+Sentry-Image is an open-source project for detecting AI-generated contents. The core features will include:
 * The weights, training code and evaluation code for state-of-the-art AI-generated contents detection models.
 * The training, validation and test datasets for [Sentry-Image Leaderboard](http://sentry.infimagine.com/).
+
+Why we need Sentry-Image?
+* 🧐 Recent [study](https://arxiv.org/abs/2304.13023) have shown that humans struggle significantly to distinguish real photos from AI-generated ones, with a misclassification rate of **38.7%**.
+
+* 🤗 To help people confirm whether the images they see are real images or AI-generated images, we launched the Sentry-Image project.
+
+* 💻 Sentry-Image is an open source project which provides the SOTA fake image detection models in [Sentry-Image Leaderboard](http://sentry.infimagine.com/) to detect whether the image provided is an AI-generated or real image.
+
+Stay tuned for this project! Feel free to contact [contact@infimagine.com](contact@infimagine.com)! 😆 
 
 ## News
 * [2023/07] We open source the [Sentry-Image repository](https://github.com/Inf-imagine/Sentry) and [Sentry-Image Demo & Leaderboard](http://sentry.infimagine.com/). 
