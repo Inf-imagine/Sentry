@@ -32,21 +32,38 @@ Stay tuned for this project! Feel free to contact [contact@infimagine.com](conta
 ## Fake Image Dataset
 Fake Image Dataset is now open-sourced at [huggingface (InfImagine Organization)](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main/ImageData/train). ↗ It consists of two folders, *ImageData* and *MetaData*. *ImageData* contains the compressed packages of the Fake Image Dataset, while *MetaData* contains the labeling information of the corresponding data indicating whether they are real or fake.
 ### How to Download
+You can use following codes to download the dataset：
 ```shell
 git lfs install
 git clone https://huggingface.co/datasets/InfImagine/FakeImageDataset
 ```
+You can use following codes to extract the files in each subfolder (take the *IF-CC95K* subfolder in ImageData/val/IF-CC95K as an example)：
+```shell
+cat IF-CC95K.tar.gz.* > IF-CC95K.tar.gz
+tar -xvf IF-CC95K.tar.gz
+```
 
-### Fake2M Dataset
+### Training Dataset (Fake2M)
 
 | Dataset     | SD-V1.5Real-dpms-25 | IF-V1.0-dpms++-25 | StyleGAN3     |
-| ----------- | :-----------:       | :-----------:     | :-----------: |
+| :----------- | :-----------:       | :-----------:     | :-----------: |
 | Generator   | Diffusion           | Diffusion         | GAN           |
 | Numbers     | 1M                  | 1M                | 87K           |
 | Resolution  | 512                 | 256               | (>=512)       |
 | Caption     | CC3M-Train          | CC3M-Train        | -             |
-| ImageData Path     | ImageData/train/SDv15R-CC1M          | ImageData/train/IF-CC1M        | ImageData/train/stylegan3-80K             |
+| ImageData Path     | ImageData/train/SDv15R-CC1M | ImageData/train/IFv1-CC1M | ImageData/train/stylegan3-80K |
 | MetaData Path     | MetaData/train/SDv15R-CC1M.csv          | MetaData/train/IF-CC1M.csv        | MetaData/train/stylegan3-80K.csv             |
+
+### Validation Dataset (MPBench)
+
+| Dataset     | SDv15               | SDv21             | IF            | Cogview2      | StyleGAN3     | Midjourneyv5  |
+| :---------- | :-----------:       | :-----------:     | :-----------: | :-----------: | :-----------: | :-----------: |
+| Generator   | Diffusion           | Diffusion         | Diffusion     | AR            | GAN           | -             |
+| Numbers     | 30K                 | 15K               | 95K           | 22K           | 60K           | 5K            |
+| Resolution  | 512                 | 512               | 256           | 480           | (>=512)       | (>=512)       |
+| Caption     | CC15K-val           | CC15K-val         | CC15K-val     | CC15K-val     | -             | -             |
+| ImageData Path | ImageData/val/SDv15-CC30K | ImageData/val/SDv21-CC15K | ImageData/val/IF-CC95K | ImageData/val/cogview2-22K | ImageData/val/stylegan3-60K | ImageData/val/Midjourneyv5-5K|
+| MetaData Path  | MetaData/val/SDv15-CC30K.csv| MetaData/val/SDv21-CC15K.csv | MetaData/val/IF-CC95K.csv | MetaData/val/cogview2-22K.csv | MetaData/val/stylegan3-60K.csv | MetaData/val/Midjourneyv5-5K.csv |
 
 
 ## TODO
