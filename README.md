@@ -2,7 +2,7 @@
 
 # Sentry-Image: Detect Any AI-generated Images
 <p align="center">
-🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 🐦 <a href="" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">Paper</a>
+🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 🐦 <a href="https://twitter.com/infimagine/status/1680439942063992832" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">Paper</a>
 • 📦 <a href="https://huggingface.co/datasets/InfImagine/FakeImageDataset" target="_blank">Dataset</a> <br>
 </p>
 
