@@ -2,8 +2,8 @@
 
 # Sentry-Image: Detect Any AI-generated Images
 <p align="center">
-🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 🐦 <a href="https://twitter.com/infimagine/status/1680439942063992832" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">Paper</a>
-• 📦 <a href="https://huggingface.co/datasets/InfImagine/FakeImageDataset" target="_blank">Dataset</a> <br>
+🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 📋 <a href="https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill" target="_blank">Sentry-Questionnaire</a>  • 🐦 <a href="https://twitter.com/infimagine/status/1680439942063992832" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">Paper</a> • 📦 <a href="https://huggingface.co/datasets/InfImagine/FakeImageDataset" target="_blank">Dataset</a> <br>
+
 </p>
 
 
@@ -11,6 +11,7 @@
 Sentry-Image is an open-source project for detecting AI-generated contents. The core features will include:
 * The weights, training code and evaluation code for state-of-the-art AI-generated contents detection models.
 * The training, validation and test [datasets](https://huggingface.co/datasets/InfImagine/FakeImageDataset) for [Sentry-Image Leaderboard](http://sentry.infimagine.com/).
+* An open [questionnaire(Sentry-Questionnaire)](https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill) from HPBench.
 
 Why we need Sentry-Image?
 * 🧐 Recent [study](https://arxiv.org/abs/2304.13023) have shown that humans struggle significantly to distinguish real photos from AI-generated ones, with a misclassification rate of **38.7%**.
@@ -24,6 +25,7 @@ Stay tuned for this project! Feel free to contact [contact@infimagine.com](conta
 ## News
 * [2023/07] We open source the [Sentry-Image repository](https://github.com/Inf-imagine/Sentry) and [Sentry-Image Demo & Leaderboard](http://sentry.infimagine.com/). 
 * [2023/07] We open source the [Sentry-Image dataset](https://huggingface.co/datasets/InfImagine/FakeImageDataset). 
+* [2023/08] We provide an open [questionnaire(Sentry-Questionnaire)](https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill) from HPBench! Now everyone can test your discriminant score against AIGC!
 
 ## Install
 
@@ -41,6 +43,60 @@ You can use following codes to extract the files in each subfolder (take the *IF
 ```shell
 cat IF-CC95K.tar.gz.* > IF-CC95K.tar.gz
 tar -xvf IF-CC95K.tar.gz
+```
+
+### Data Organization
+We recommend that your data directory should be organized like this: 
+```
+FakeImageDataset/
+├── ImageData/
+│   ├── train/
+|   |   ├── IFv1-CC1M/
+|   |   |   └── IFv1-dpmsolver++-50-1M/
+|   |   ├── SDv15R-CC1M/
+|   |   |   └── SDv15R-dpmsolver-25-1M/
+|   |   └── stylegan3-80K/
+|   |       ├── stylegan3-r-afhqv2-512x512/
+|   |       ├── stylegan3-r-ffhqu-1024x1024/
+|   |       ├── stylegan3-r-metfaces-1024x1024/
+|   |       ├── stylegan3-t-afhqv2-512x512/
+|   |       ├── stylegan3-t-ffhqu-1024x1024/
+|   |       └── stylegan3-t-metfaces-1024x1024/
+│   └── val/
+|       ├── IF-CC95K/
+|       |   ├── IF-ddim-25-15K/
+|       |   ├── IF-ddim-50-15K/
+|       |   ├── IF-ddpm-50-15K/
+|       |   ├── IF-dpmsolver++-10-15K/
+|       |   ├── IF-dpmsolver++-25-15K/
+|       |   └── IF-dpmsolver++-50-15K/
+|       ├── Midjourneyv5-5K/
+|       ├── SDv15-CC30K/
+|       |   ├── SDv15-dpmsolver-25-15K/
+|       |   └── SDv15R-dpmsolver-25-15K/
+|       ├── SDv21-CC15K/
+|       |   └── SDv2-dpmsolver-25-10K/
+|       ├── cogview2-22K/
+|       └── stylegan3-60K/
+|           ├── stylegan3-r-afhqv2-512x512/
+|           ├── stylegan3-r-ffhqu-1024x1024/
+|           ├── stylegan3-r-metfaces-1024x1024/
+|           ├── stylegan3-t-afhqv2-512x512/
+|           ├── stylegan3-t-ffhqu-1024x1024/
+|           └── stylegan3-t-metfaces-1024x1024/
+└── MetaData/
+    ├── train/
+    |   ├── IF-CC1M.csv
+    |   ├── SDv15R-CC1M.csv
+    |   └── stylegan3-80K.csv
+    └── val/
+        ├── IF-CC95K.csv
+        ├── Midjourneyv5-5K.csv
+        ├── SDv15-CC30K.csv
+        ├── SDv21-CC15K.csv
+        ├── cogview2-22K.csv
+        ├── stylegan3-60K.csv
+        └── stylegan3-80K.csv
 ```
 
 ### Training Dataset (Fake2M)
@@ -65,15 +121,28 @@ tar -xvf IF-CC95K.tar.gz
 | ImageData Path | ImageData/val/SDv15-CC30K | ImageData/val/SDv21-CC15K | ImageData/val/IF-CC95K | ImageData/val/cogview2-22K | ImageData/val/stylegan3-60K | ImageData/val/Midjourneyv5-5K|
 | MetaData Path  | MetaData/val/SDv15-CC30K.csv| MetaData/val/SDv21-CC15K.csv | MetaData/val/IF-CC95K.csv | MetaData/val/cogview2-22K.csv | MetaData/val/stylegan3-60K.csv | MetaData/val/Midjourneyv5-5K.csv |
 
+### Others
+Aesthetic Quality: 
+We provide corresponding aesthetic scores for our dataset, using [CLIP-IQA](https://github.com/IceClear/CLIP-IQA).
+You can download the aesthetic scores from [here](https://huggingface.co/datasets/InfImagine/FakeImageDataset/blob/main/AestheticQuality.zip) in our [huggingface dataset page](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main).
 
-## TODO
-- [x] Release the training, validation datasets from MPBench.
-- [ ] Release the test datasets from Sentry-Image Leaderboard.
-- [ ] Release the training and evaluation code of Sentry-Image.
+Visulization: 
+We provide visualizations for our dataset, which you can find [here](assets/visualization/README.md).
+
+
+## Maintenance Plan
+We are currently in the process of expanding our support to include two of the latest models for the fake image dataset: Stable Diffusion XL and Midjourney V5. We have devised a comprehensive maintenance plan, as follows:
+- [x] (2023.7) Release the [training, validation datasets](https://huggingface.co/datasets/InfImagine/FakeImageDataset) from MPBench.
+- [x] (2023.8) Release an open [questionnaire](https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill) from HPBench!
+- [ ] (2023.9) Support Stable Diffusion XL fake image dataset
+- [ ] (2023.9) Release the training and evaluation code of Sentry-Image.
+- [ ] (2023.10) Support Midjourney V5 fake image datset
+- [ ] (2023.10) Release a new test datasets for Sentry-Image-Leaderboard.
 
 
 ## License
 This project is open-sourced under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0). These weights and datasets are fully open for academic research and can be used for commercial purposes with official written permission. If you find our open-source models and datasets useful for your business, we welcome your donation to support the development of the next-generation Sentry-Image model. Please contact [contact@infimagine.com](contact@infimagine.com) for commercial licensing and donation inquiries.
+
 ## Citation
 The code and model in this repository is mostly developed for or derived from the paper below. Please cite it if you find the repository helpful.
 ```
