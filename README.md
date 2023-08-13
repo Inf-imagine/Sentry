@@ -27,9 +27,6 @@ Stay tuned for this project! Feel free to contact [contact@infimagine.com](conta
 * [2023/07] We open source the [Sentry-Image dataset](https://huggingface.co/datasets/InfImagine/FakeImageDataset). 
 * [2023/08] We provide an open [questionnaire(Sentry-Questionnaire)](https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill) from HPBench! Now everyone can test your discriminant score against AIGC!
 
-## Install
-
-## Model Weights
 
 ## Fake Image Dataset
 Fake Image Dataset is now open-sourced at [huggingface (InfImagine Organization)](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main/ImageData/train). It consists of two folders, *ImageData* and *MetaData*. *ImageData* contains the compressed packages of the Fake Image Dataset, while *MetaData* contains the labeling information of the corresponding data indicating whether they are real or fake.
