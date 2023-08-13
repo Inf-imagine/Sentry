@@ -32,7 +32,7 @@ Stay tuned for this project! Feel free to contact [contact@infimagine.com](conta
 ## Model Weights
 
 ## Fake Image Dataset
-Fake Image Dataset is now open-sourced at [huggingface (InfImagine Organization)](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main/ImageData/train). ↗ It consists of two folders, *ImageData* and *MetaData*. *ImageData* contains the compressed packages of the Fake Image Dataset, while *MetaData* contains the labeling information of the corresponding data indicating whether they are real or fake.
+Fake Image Dataset is now open-sourced at [huggingface (InfImagine Organization)](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main/ImageData/train). It consists of two folders, *ImageData* and *MetaData*. *ImageData* contains the compressed packages of the Fake Image Dataset, while *MetaData* contains the labeling information of the corresponding data indicating whether they are real or fake.
 ### How to Download
 You can use following codes to download the dataset：
 ```shell
@@ -122,11 +122,11 @@ FakeImageDataset/
 | MetaData Path  | MetaData/val/SDv15-CC30K.csv| MetaData/val/SDv21-CC15K.csv | MetaData/val/IF-CC95K.csv | MetaData/val/cogview2-22K.csv | MetaData/val/stylegan3-60K.csv | MetaData/val/Midjourneyv5-5K.csv |
 
 ### Others
-Aesthetic Quality: 
+**Aesthetic Quality**: 
 We provide corresponding aesthetic scores for our dataset, using [CLIP-IQA](https://github.com/IceClear/CLIP-IQA).
 You can download the aesthetic scores from [here](https://huggingface.co/datasets/InfImagine/FakeImageDataset/blob/main/AestheticQuality.zip) in our [huggingface dataset page](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main).
 
-Visulization: 
+**Visulization**: 
 We provide visualizations for our dataset, which you can find [here](assets/visualization/README.md).
 
 
