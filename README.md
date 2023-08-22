@@ -2,7 +2,7 @@
 
 # Sentry-Image: Detect Any AI-generated Images
 <p align="center">
-🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 📋 <a href="https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill" target="_blank">Sentry-Questionnaire</a>  • 🐦 <a href="https://twitter.com/infimagine/status/1680439942063992832" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">Paper</a> • 📦 <a href="https://huggingface.co/datasets/InfImagine/FakeImageDataset" target="_blank">Dataset</a> <br>
+🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 📋 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYMAEnqsaxQPNfLqFEpnFxEUqBhmUoRyfPBfYVfZOx4MtLA/viewform?usp=sharing" target="_blank">Sentry-Questionnaire</a>  • 🐦 <a href="https://twitter.com/infimagine/status/1680439942063992832" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">Paper</a> • 📦 <a href="https://huggingface.co/datasets/InfImagine/FakeImageDataset" target="_blank">Dataset</a> <br>
 
 </p>
 
@@ -11,7 +11,7 @@
 Sentry-Image is an open-source project for detecting AI-generated contents. The core features will include:
 * The weights, training code and evaluation code for state-of-the-art AI-generated contents detection models.
 * The training, validation and test [datasets](https://huggingface.co/datasets/InfImagine/FakeImageDataset) for [Sentry-Image Leaderboard](http://sentry.infimagine.com/).
-* An open [questionnaire(Sentry-Questionnaire)](https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill) from HPBench.
+* An open [questionnaire(Sentry-Questionnaire)](https://docs.google.com/forms/d/e/1FAIpQLSfhYMAEnqsaxQPNfLqFEpnFxEUqBhmUoRyfPBfYVfZOx4MtLA/viewform?usp=sharing) from HPBench.
 
 Why we need Sentry-Image?
 * 🧐 Recent [study](https://arxiv.org/abs/2304.13023) have shown that humans struggle significantly to distinguish real photos from AI-generated ones, with a misclassification rate of **38.7%**.
@@ -25,7 +25,7 @@ Stay tuned for this project! Feel free to contact [contact@infimagine.com](conta
 ## News
 * [2023/07] We open source the [Sentry-Image repository](https://github.com/Inf-imagine/Sentry) and [Sentry-Image Demo & Leaderboard](http://sentry.infimagine.com/). 
 * [2023/07] We open source the [Sentry-Image dataset](https://huggingface.co/datasets/InfImagine/FakeImageDataset). 
-* [2023/08] We provide an open [questionnaire(Sentry-Questionnaire)](https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill) from HPBench! Now everyone can test your discriminant score against AIGC!
+* [2023/08] We provide an open [questionnaire(Sentry-Questionnaire)](https://docs.google.com/forms/d/e/1FAIpQLSfhYMAEnqsaxQPNfLqFEpnFxEUqBhmUoRyfPBfYVfZOx4MtLA/viewform?usp=sharing) from HPBench! Now everyone can test your discriminant score against AIGC!
 
 
 ## Fake Image Dataset
@@ -130,7 +130,7 @@ We provide visualizations for our dataset, which you can find [here](assets/visu
 ## Maintenance Plan
 We are currently in the process of expanding our support to include two of the latest models for the fake image dataset: Stable Diffusion XL and Midjourney V5. We have devised a comprehensive maintenance plan, as follows:
 - [x] (2023.7) Release the [training, validation datasets](https://huggingface.co/datasets/InfImagine/FakeImageDataset) from MPBench.
-- [x] (2023.8) Release an open [questionnaire](https://docs.google.com/forms/d/1vI8TkXGKGiQTluKYpisCpjGP0JZnjwpW06Iek4WuF6k/prefill) from HPBench!
+- [x] (2023.8) Release an open [questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSfhYMAEnqsaxQPNfLqFEpnFxEUqBhmUoRyfPBfYVfZOx4MtLA/viewform?usp=sharing) from HPBench!
 - [ ] (2023.9) Support Stable Diffusion XL fake image dataset
 - [ ] (2023.9) Release the training and evaluation code of Sentry-Image.
 - [ ] (2023.10) Support Midjourney V5 fake image datset
