@@ -2,7 +2,7 @@
 
 # Sentry-Image: Detect Any AI-generated Images
 <p align="center">
-🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 📋 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYMAEnqsaxQPNfLqFEpnFxEUqBhmUoRyfPBfYVfZOx4MtLA/viewform?usp=sharing" target="_blank">Sentry-Questionnaire</a>  • 🐦 <a href="https://twitter.com/infimagine/status/1680439942063992832" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">Paper</a> • 📦 <a href="https://huggingface.co/datasets/InfImagine/FakeImageDataset" target="_blank">Dataset</a> <br>
+📃 <a href="https://arxiv.org/abs/2304.13023" target="_blank">NeurIPS'23 Paper</a> • 🤗 <a href="http://sentry.infimagine.com/" target="_blank">Demo & Leaderboard</a> • 📋 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYMAEnqsaxQPNfLqFEpnFxEUqBhmUoRyfPBfYVfZOx4MtLA/viewform?usp=sharing" target="_blank">Sentry-Questionnaire</a>  • 🐦 <a href="https://twitter.com/infimagine/status/1680439942063992832" target="_blank">Twitter</a> • 📦 <a href="https://huggingface.co/datasets/InfImagine/FakeImageDataset" target="_blank">Dataset</a> <br>
 
 </p>
 
@@ -150,12 +150,10 @@ The code and model in this repository is mostly developed for or derived from th
       publisher = {InfImagine, Shanghai AI Laboratory},
       howpublished = "\url{https://github.com/Inf-imagine/Sentry}"
 },
-@misc{lu2023seeing,
-      title = {Seeing is not always believing: Benchmarking Human and Model Perception of AI-Generated Images}, 
-      author = {Zeyu Lu, Di Huang, Lei Bai, Jingjing Qu, Chengyue Wu, Xihui Liu, Wanli Ouyang},
-      year = {2023},
-      eprint = {2304.13023},
-      archivePrefix = {arXiv},
-      primaryClass = {cs.AI}
+@inproceedings{lu2023seeing,
+ title = {Seeing is not always believing: Benchmarking Human and Model Perception of AI-Generated Images},
+ author = {Zeyu Lu, Di Huang, Lei Bai, Jingjing Qu, Chengyue Wu, Xihui Liu, Wanli Ouyang},
+ booktitle = {Advances in Neural Information Processing Systems},
+ year = {2023},
 }
 ```
