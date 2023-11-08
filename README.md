@@ -29,8 +29,8 @@ Stay tuned for this project! Feel free to contact [contact@infimagine.com](conta
 
 
 ## Fake Image Dataset
-Fake Image Dataset is now open-sourced at [huggingface (InfImagine Organization)](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main/ImageData/train). It consists of two folders, *ImageData* and *MetaData*. *ImageData* contains the compressed packages of the Fake Image Dataset, while *MetaData* contains the labeling information of the corresponding data indicating whether they are real or fake.
-### How to Download
+Fake Image Dataset is now open-sourced at [huggingface (InfImagine Organization)](https://huggingface.co/datasets/InfImagine/FakeImageDataset/tree/main/ImageData/train) and [openxlab](https://openxlab.org.cn/datasets/whlzy/FakeImageDataset/tree/main). It consists of two folders, *ImageData* and *MetaData*. *ImageData* contains the compressed packages of the Fake Image Dataset, while *MetaData* contains the labeling information of the corresponding data indicating whether they are real or fake.
+### How to Download in huggingface
 You can use following codes to download the dataset：
 ```shell
 git lfs install
